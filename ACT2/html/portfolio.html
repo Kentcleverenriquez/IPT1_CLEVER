@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        /* Add styles for images in game achievements */
+        .game-achievement img {
+            width: 100%;  /* Set to 100% of the container's width */
+            max-width: 400px; /* Maximum width to avoid images being too large */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: add rounded corners */
+            margin-bottom: 10px; /* Space below the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+            <div class="buttons">
+                <button onclick="goHome()">Home</button> <!-- Home button -->
+                <button onclick="showContactMe()">Contact Me</button> <!-- Changed Travels button to Contact Me -->
+                <button onclick="showOnlineGames()">Online Games Achievements</button>
+            </div>
+        </header>
+        <div class="image-section">
+            <label for="uploadImage">
+                <img src="../images/kent.jpg" alt="Profile Picture" id="profilePic">
+            </label>
+            <input type="file" id="uploadImage" accept="image/*">
+            <div class="image-info">
+                <p>Name: Enriquez Clever Kent B.</p>
+                <p>Year and Section: BSIT-3A</p>
+                <p>Birthday: 06/21/2004</p>
+                <p>Gender: MALE</p>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="text-section" id="profileText">
+                <div class="self-intro">
+                    <h2>Self Introduction</h2>
+                    <p>I have a passion for playing online games, finding joy in the immersive worlds and challenges they present. Drawing is another hobby I cherish, as it allows me to express my creativity and unwind. Occasionally, I indulge in travelling, exploring new places and cultures. While I am slightly reserved, I open up and become quite friendly when I meet others who share my interests.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goHome() {
+            document.getElementById('profileText').innerHTML = "<div class='self-intro'><h2>Self Introduction</h2><p>I have a passion for playing online games, finding joy in the immersive worlds and challenges they present. Drawing is another hobby I cherish, as it allows me to express my creativity and unwind. Occasionally, I indulge in travelling, exploring new places and cultures. While I am slightly reserved, I open up and become quite friendly when I meet others who share my interests.</p></div>";
+        }
+
+        function showContactMe() {
+            document.getElementById('profileText').innerHTML = "<div class='self-intro'><h2>Contact Me</h2><p><strong>Email:</strong> <a href='mailto:cleverkentenriquez656@gmail.com'>cleverkentenriquez656@gmail.com</a></p><p><strong>Contact Number:</strong> 09698769</p></div>";
+        }
+
+        function showOnlineGames() {
+            document.getElementById('profileText').innerHTML = `
+                <div class='self-intro'>
+                    <h2>Online Games Achievements</h2>
+                    <div class="game-achievement">
+                        <img src="../images/akalitop.jpg" alt="Game Achievement 1">
+                        <p><strong>Achievement 1:</strong> TOP SERVER AKALI AND TOP SERVER NUNUWILLUMP TOP SERVER HECARIM</p>
+                    </div>
+                    <div class="game-achievement">
+                        <img src="../images/gm.jpg" alt="Game Achievement 2">
+                        <p><strong>Achievement 2:</strong> SEASONAL GM AND MASTER RANK</p>
+                    </div>
+                    <div class="game-achievement">
+                        <img src="../images/hoktops.jpg" alt="Game Achievement 3">
+                        <p><strong>Achievement 3:</strong> TOP 1 NAVOTAS SERVER CHAMPION AND FARM LANE</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
