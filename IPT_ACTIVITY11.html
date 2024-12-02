@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Profile and Biodata</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script src="script.js" defer></script> 
+ <style type="text/css" id="dcoder_stylesheet">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#profilePic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.image-info {
+    font-size: 16px;
+}
+
+.text-section {
+    margin-top: 20px;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: #45a049;
+}
+
+button.home-button {
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.home-button:hover {
+    background-color: #005f73;
+}
+
+.section {
+    display: none;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.biodata-table td, .biodata-table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea.emergency-contact {
+    height: 100px;
+}
+
+.game-achievement {
+    margin-bottom: 20px;
+}
+
+.game-achievement img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}</style></head> 
+ <body> 
+  <header> <!-- Removed the fixed navigation buttons from the header --> 
+  </header> <!-- Profile Section --> 
+  <div id="profile" class="container"> 
+   <h1>My Profile</h1> 
+   <div class="image-section"> <label for="uploadImage"> <img src="../images/kent.jpg" alt="Profile Picture" id="profilePic"> </label> 
+    <input type="file" id="uploadImage" accept="image/*"> 
+    <div class="image-info"> 
+     <p>Name: Enriquez Clever Kent B.</p> 
+     <p>Year and Section: BSIT-3A</p> 
+     <p>Birthday: 06/21/2004</p> 
+     <p>Gender: MALE</p> 
+    </div> 
+   </div> <!-- Self Introduction Section (now part of Profile) --> 
+   <div class="text-section" id="homeSection"> 
+    <div class="self-intro"> 
+     <h2>Self Introduction</h2> 
+     <p>I have a passion for playing online games, finding joy in the immersive worlds and challenges they present. Drawing is another hobby I cherish, as it allows me to express my creativity and unwind. Occasionally, I indulge in travelling, exploring new places and cultures. While I am slightly reserved, I open up and become quite friendly when I meet others who share my interests.</p> 
+    </div> 
+   </div> <!-- Buttons Section Below Image --> 
+   <div class="nav-buttons"> <button onclick="showSection('biodata')">Biodata</button> <button onclick="showSection('contact')">Contact Me</button> <button onclick="showSection('gameAchievements')">Online Games Achievements</button> 
+   </div> <!-- Profile content that will change based on button clicked --> 
+   <div id="contactSection" class="section"> 
+    <div class="text-section"> 
+     <div class="self-intro"> 
+      <h2>Contact Me</h2> 
+      <p><strong>Email Address:</strong> <a href="mailto:cleverkentenriquez656@gmail.com">cleverkentenriquez656@gmail.com</a></p> 
+      <p><strong>Contact Number:</strong> 09698769</p> 
+     </div> 
+    </div> <!-- Home button --> <button class="home-button" onclick="showSection('home')">Home</button> 
+   </div> 
+   <div id="gameAchievementsSection" class="section"> 
+    <div class="self-intro"> 
+     <h2>Online Games Achievements</h2> 
+     <div class="game-achievement"> 
+      <img src="../images/akalitop.jpg" alt="Game Achievement 1"> 
+      <p><strong>Achievement 1:</strong> TOP SERVER AKALI AND TOP SERVER NUNUWILLUMP TOP SERVER HECARIM</p> 
+     </div> 
+     <div class="game-achievement"> 
+      <img src="../images/gm.jpg" alt="Game Achievement 2"> 
+      <p><strong>Achievement 2:</strong> SEASONAL GM AND MASTER RANK</p> 
+     </div> 
+     <div class="game-achievement"> 
+      <img src="../images/hoktops.jpg" alt="Game Achievement 3"> 
+      <p><strong>Achievement 3:</strong> TOP 1 NAVOTAS SERVER CHAMPION AND FARM LANE</p> 
+     </div> 
+    </div> <!-- Home button --> <button class="home-button" onclick="showSection('home')">Home</button> 
+   </div> 
+   <div id="biodataSection" class="section"> 
+    <h1>BIO-DATA</h1> 
+    <h2>PERSONAL DATA</h2> 
+    <table class="biodata-table"> 
+     <tbody> 
+      <tr> 
+       <td><h3>Position Desired</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Date</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Name</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Gender</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>City Address</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Provincial Address</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Telephone</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Cellphone</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Email Address</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Date of Birth</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Civil Status</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Birth Place</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Citizenship</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Religion</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Height</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Weight</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Spouse</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Name of Children</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Father's Name</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Occupation</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Mother's Name</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Occupation</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <h3>Language or Dialect Spoken and Written:</h3> <textarea rows="2"></textarea> 
+    <h3>Person to be Contacted in Case of Emergency:</h3> <textarea rows="2" class="emergency-contact"></textarea> 
+    <h2>EDUCATIONAL BACKGROUND</h2> 
+    <table class="biodata-table"> 
+     <tbody> 
+      <tr> 
+       <td><h3>Elementary</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Year Graduated</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>High School</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Year Graduated</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>College</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Year Graduated</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Degree Received</h3></td> 
+       <td colspan="3">____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Special Skills</h3></td> 
+       <td colspan="3">____________________________</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <h2>EMPLOYMENT RECORD</h2> 
+    <table class="biodata-table"> 
+     <tbody> 
+      <tr> 
+       <td><h3>Company Name</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Position</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>From</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>To</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <h2>CHARACTER REFERENCE</h2> 
+    <table class="biodata-table"> 
+     <tbody> 
+      <tr> 
+       <td><h3>Name</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Position</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+      <tr> 
+       <td><h3>Company</h3></td> 
+       <td>____________________________</td> 
+       <td><h3>Contact No.</h3></td> 
+       <td>____________________________</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <div class="signature"> 
+     <h3>Applicant's Signature____________________________</h3> 
+    </div> <!-- Home button --> <button class="home-button" onclick="showSection('home')">Home</button> 
+   </div> 
+  </div> 
+ 
+</body></html>
